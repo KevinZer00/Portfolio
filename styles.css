@@ -1,19 +1,20 @@
 @font-face {
     font-family: 'Dungeon';
-    src: url('fonts/PKMN-Mystery-Dungeon.ttf');
+    src: url('fonts/DePixelBreit.ttf');
 }
 
 html, body {
     font-family: 'Dungeon';
     margin: 0;
     padding: 0;
-    background-color: #bb8c6d;
+    background-color: #c5c5c5;
     background-image:
         linear-gradient(0deg, transparent 80%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 85%, transparent 85%),
         linear-gradient(90deg, transparent 80%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 85%, transparent 85%);
     height: 100%;
     background-size: 200px 100px;
     overflow-x: hidden;
+    line-height: 2;
 }
 
 .profile-container {
@@ -25,7 +26,7 @@ html, body {
     border: 8px solid #8b4e2b;
     padding: 20px;
     margin-top: 50px;
-    font-size: 30px;
+    font-size: 18px;
     align-items: flex-start;
     transition: transform, box-shadow;
     transform: translate(-10px, -10px);
@@ -46,11 +47,38 @@ html, body {
     flex-direction: column;  
     justify-content: center;  
     padding: 10px;  
-    line-height: 1.0;
 }
 
 .description p {
     margin-bottom: -10px;
+}
+
+.game-btn {
+    margin-top: 10px;
+    display: inline-block;
+    background-color: rgb(4, 255, 234);
+    color: black;
+    padding: 2.5px 5px;
+    border: 3px solid #000000;
+    box-shadow: 
+        3px 3px 0px #000000,
+        6px 6px 0px #030000,
+        9px 9px 0px #000000;
+    transition: transform, box-shadow;
+    text-decoration: none;
+    margin-right: 10px; 
+}
+
+.game-btn:hover {
+    color: white;
+}
+
+.game-btn:active {
+    box-shadow: 
+    1px 1px 0px #000000,
+    2px 2px 0px #000000,
+    3px 3px 0px #000000;
+    transform: translateY(6px) translateX(6px); 
 }
 
 .keyword {
@@ -60,7 +88,7 @@ html, body {
     border: 3px solid #000000;
     color: #FFFFFF;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 18px;
     margin-top: 10px;
     margin-right: 10px;
     box-shadow: 
@@ -69,13 +97,6 @@ html, body {
         9px 9px 0px #000000;
 }
 
-.keyword:hover {
-    box-shadow: 
-    1px 1px 0px #000000,
-    2px 2px 0px #000000,
-    3px 3px 0px #000000;
-    transform: translateY(6px) translateX(6px); 
-}
 
 .keyword.red {
     background-color: red;
@@ -127,7 +148,7 @@ html, body {
     margin-right: 10px; 
 }
 
-.icon-container:hover {
+.icon-container:active {
     box-shadow: 
     1px 1px 0px #000000,
     2px 2px 0px #000000,
@@ -137,8 +158,8 @@ html, body {
 
 
 .profile-image {
-    width: 300px; 
-    height: 300px;
+    width: 350px; 
+    height: 350px;
     margin: 50px;
     height: auto;
     margin-right: 20px; 
@@ -154,7 +175,7 @@ html, body {
 .projects-section {
     width: 70vw;
     margin: 50px auto;
-    font-size: 26px;
+    font-size: 18px;
     text-align: center;
 }
 
@@ -165,17 +186,17 @@ html, body {
 }
 
 h2 {
-    font-size: 50px;
+    font-size: 24px;
 }
 
 h3 {
-    font-size: 40px;
+    font-size: 24px;
     text-decoration: underline;
 }
 
 .project-card {
     background-color: #FDF5E6;
-    font-size: 30px;
+    font-size: 18px;
     border: 8px solid #8B5A2B;
     padding-bottom: 20px;
     padding-left: 50px;
@@ -196,23 +217,44 @@ h3 {
 .project-card img {
     width: 500px;
     height: 300px;
-    margin-bottom: 15px;
+    opacity: 0.9;
 }
+
+.project-card img:hover {
+    opacity: 0.75;
+}
+
+.image-container {
+    position: relative;
+    display: inline-block; 
+}
+
+.overlay-text {
+    font-size: 20px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); 
+    color: rgb(248, 248, 248);
+    font-weight: bold;
+    background-color: rgba(0, 0, 0, 1); 
+    padding: 5px 10px;
+    border-radius: 5px; 
+}
+
 
 .project-card a {
     display: inline-block;
     margin-top: 10px;
     margin-bottom: 10px;
     padding: 10px 20px;
-    border: 3px solid #ff0303;
     text-decoration: none;
     color: #000000;
     transition: background-color 0.3s;
-    font-size: 30px;
+    font-size: 18px;
 }
 
-.project-card a:hover {
-    background-color: #ff0000;
+.view-project-btn:hover {
     color: #FDF5E6;
 }
 
@@ -229,6 +271,7 @@ h3 {
         6px 6px 0px #000000,
         9px 9px 0px #000000;
 }
+
 
 .view-project-btn:active {
     box-shadow: 
@@ -250,7 +293,7 @@ h3 {
     box-shadow: 5px 5px 0px #53361a, 
                 10px 10px 0px #53361a, 
                 15px 15px 0px #53361a; 
-    font-size: 24px;
+    font-size: 18px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -269,7 +312,7 @@ h3 {
 .input-group label {
     display: block;
     margin-bottom: 10px;
-    font-size: 30px;
+    font-size: 18px;
     display: flex;
 }
 
@@ -280,7 +323,7 @@ h3 {
     padding: 10px;
     border: 5px solid #8B5A2B;
     box-shadow: 3px 3px 0px #8B5A2B;
-    font-size: 30px;
+    font-size: 18px;
     margin-bottom: 10px;
 }
 
@@ -300,7 +343,7 @@ h3 {
     border: 3px solid #000000;
     color: black;
     text-decoration: none;
-    font-size: 30px;
+    font-size: 18px;
     transition: transform, box-shadow;
     box-shadow: 
         3px 3px 0px #000000,
@@ -324,7 +367,7 @@ h3 {
 
 @media only screen and (max-width: 500px) {
     .profile-container {
-        width: 80vw; 
+        width: 70vw; 
         flex-direction: column;
         align-items: center;
         transform: none; 
@@ -340,7 +383,7 @@ h3 {
 
     .description {
         text-align: center;
-        font-size: 24px; 
+        font-size: 14px; 
     }
 
     .description p {
@@ -348,7 +391,7 @@ h3 {
     }
 
     .keyword {
-        font-size: 18px; 
+        font-size: 14px; 
         margin: 5px;
     }
 
@@ -367,24 +410,33 @@ h3 {
     }
 
     .project-card {
-        width: 40vw;
+        width: 45vw;
         margin: auto;
-        font-size: 24px;
+        font-size: 14px;
     }
 
     .project-card h3 {
         text-decoration: none;
-        font-size: 30px;
+        font-size: 16px;
     }
 
     .project-card a {
-        font-size: 24px;
+        font-size: 14px;
     }
 
 
     .project-card img {
         width: 100%;
-        height: auto;
+        height: 100px;
+    }
+
+    .image-container {
+        position: relative;
+        display: inline-block; 
+    }
+    
+    .overlay-text {
+        display: none;
     }
 
     .contact-section {
@@ -396,12 +448,12 @@ h3 {
     }
 
     .input-group label {
-        font-size: 24px; 
+        font-size: 14px; 
     }
 
     .input-group input, .input-group textarea {
         width: 250px; 
-        font-size: 24px; 
+        font-size: 14px; 
     }
 }
 
@@ -423,7 +475,7 @@ h3 {
 
     .description {
         text-align: center;
-        font-size: 30px; 
+        font-size: 16px; 
     }
 
     .description p {
@@ -431,7 +483,7 @@ h3 {
     }
 
     .keyword {
-        font-size: 24px; 
+        font-size: 16px; 
         margin: 5px;
     }
 
@@ -449,24 +501,28 @@ h3 {
     }
 
     .project-card {
-        width: 40vw;
+        width: 50vw;
         margin: auto;
-        font-size: 30px;
+        font-size: 16px;
     }
 
     .project-card h3 {
         text-decoration: none;
-        font-size: 36px;
+        font-size: 20px;
     }
 
     .project-card a {
-        font-size: 30px;
+        font-size: 16px;
     }
 
 
     .project-card img {
         width: 200px;
         height: 100px;
+    }
+
+    .overlay-text {
+        display: none;
     }
 
     .contact-section {
@@ -478,12 +534,12 @@ h3 {
     }
 
     .input-group label {
-        font-size: 30px; 
+        font-size: 16px; 
     }
 
     .input-group input, .input-group textarea {
         width: 250px; 
-        font-size: 24px; 
+        font-size: 16px; 
     }
 }
 
@@ -505,7 +561,7 @@ h3 {
 
     .description {
         text-align: center;
-        font-size: 30px; 
+        font-size: 18px; 
     }
 
     .description p {
@@ -513,7 +569,7 @@ h3 {
     }
 
     .keyword {
-        font-size: 30px; 
+        font-size: 18px; 
         margin: 5px;
     }
 
@@ -538,11 +594,11 @@ h3 {
 
     .project-card h3 {
         text-decoration: none;
-        font-size: 36px;
+        font-size: 22px;
     }
 
     .project-card a {
-        font-size: 30px;
+        font-size: 18px;
     }
 
 
@@ -560,13 +616,13 @@ h3 {
     }
 
     .input-group label {
-        font-size: 30px; 
+        font-size: 18px; 
     }
 
 
     .input-group input, .input-group textarea {
         width: 250px; 
-        font-size: 30px; 
+        font-size: 18px; 
     }
 }
 
@@ -586,7 +642,7 @@ h3 {
 
     .description {
         text-align: center;
-        font-size: 30px; 
+        font-size: 18px; 
     }
 
     .description p {
@@ -594,7 +650,7 @@ h3 {
     }
 
     .keyword {
-        font-size: 30px; 
+        font-size: 18px; 
         margin: 5px;
     }
 
@@ -611,25 +667,25 @@ h3 {
     .projects-section {
         width: 90vw;
         margin: 50px auto;
-        font-size: 26px;
+        font-size: 18px;
         text-align: center;
     }
     
 
     .project-card {
         width: 400px;
-        height: 550px;
+        height: 600px;
         margin: auto;
-        font-size: 30px;
+        font-size: 18px;
     }
 
     .project-card h3 {
         text-decoration: none;
-        font-size: 36px;
+        font-size: 24px;
     }
 
     .project-card a {
-        font-size: 30px;
+        font-size: 18px;
     }
 
 
@@ -647,12 +703,12 @@ h3 {
     }
 
     .input-group label {
-        font-size: 30px; 
+        font-size: 18px; 
     }
 
     .input-group input, .input-group textarea {
         width: 300px; 
-        font-size: 30px; 
+        font-size: 18px; 
     }
 }
 
