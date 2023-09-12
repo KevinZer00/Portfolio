@@ -552,8 +552,19 @@ h3 {
         flex-direction: column;
         align-items: center;
         transform: none; 
-        box-shadow: 3px 3px 0px #53361a;
+        transition: transform, box-shadow;
+        transform: translate(-10px, -10px);
+        box-shadow: 5px 5px 0px #53361a, 
+                10px 10px 0px #53361a, 
+                15px 15px 0px #53361a; 
     }
+
+
+    .profile-container:hover {
+        transform: translate(0);
+        box-shadow: 3px 3px 0px #8B5A2B; 
+    }
+
 
     .profile-container img {
         width: 300px;
@@ -613,8 +624,18 @@ h3 {
         width: 400px; 
         padding: 20px; 
         transform: none; 
-        box-shadow: 3px 3px 0px #53361a;
         margin: 10 auto;
+        transition: transform, box-shadow;
+        transform: translate(-10px, -10px);
+        box-shadow: 5px 5px 0px #53361a, 
+                10px 10px 0px #53361a, 
+                15px 15px 0px #53361a; 
+        }
+
+
+    .contact-section:hover {
+        transform: translate(0);
+        box-shadow: 3px 3px 0px #8B5A2B; 
     }
 
     .input-group label {
@@ -635,6 +656,19 @@ h3 {
         align-items: center;
         transform: none; 
         box-shadow: 3px 3px 0px #53361a;
+        display: flex;
+        flex-direction: column;
+        transition: transform, box-shadow;
+        transform: translate(-10px, -10px);
+        box-shadow: 5px 5px 0px #53361a, 
+                10px 10px 0px #53361a, 
+                15px 15px 0px #53361a; 
+    }
+
+
+    .profile-container:hover {
+        transform: translate(0);
+        box-shadow: 3px 3px 0px #8B5A2B; 
     }
 
     .profile-container img {
@@ -700,8 +734,18 @@ h3 {
         width: 450px; 
         padding: 20px; 
         transform: none; 
-        box-shadow: 3px 3px 0px #53361a;
         margin: 10 auto;
+        transition: transform, box-shadow;
+        transform: translate(-10px, -10px);
+        box-shadow: 5px 5px 0px #53361a, 
+                10px 10px 0px #53361a, 
+                15px 15px 0px #53361a; 
+}
+
+
+    .contact-section:hover {
+        transform: translate(0);
+        box-shadow: 3px 3px 0px #8B5A2B; 
     }
 
     .input-group label {
@@ -714,4 +758,22 @@ h3 {
     }
 }
 
+@media only screen and (min-width: 1601px) and (max-width: 1800px) {
+    .projects-section {
+        width: 90vw;
+        margin: 50px auto;
+        font-size: 18px;
+        text-align: center;
+    }
+    .project-card {
+        width: 500px;
+        height: 600px;
+        margin: auto;
+        font-size: 18px;
+    }
 
+    .project-card img {
+        width: 400px;
+        height: 200px;
+    }
+}
