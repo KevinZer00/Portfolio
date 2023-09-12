@@ -7,12 +7,14 @@ html, body {
     font-family: 'Dungeon';
     margin: 0;
     padding: 0;
-    background-color: #c5c5c5;
+    background-color: #5c9b38;
     background-image:
         linear-gradient(0deg, transparent 80%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 85%, transparent 85%),
         linear-gradient(90deg, transparent 80%, rgba(255, 255, 255, 0.2) 80%, rgba(255, 255, 255, 0.2) 85%, transparent 85%);
     height: 100%;
-    background-size: 200px 100px;
+    background-image: url("images/4.png");
+    background-repeat: no-repeat;
+    background-size: cover;
     overflow-x: hidden;
     line-height: 2;
 }
