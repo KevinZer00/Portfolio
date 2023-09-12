@@ -160,11 +160,10 @@ html, body {
 
 
 .profile-image {
+    padding: 20px;
     width: 350px; 
     height: 350px;
-    margin: 50px;
     height: auto;
-    margin-right: 20px; 
 }
 
 
@@ -379,7 +378,8 @@ h3 {
     .profile-container img {
         width: 200px;
         height: 200px;
-        margin-bottom: -10px;
+        display:flex;
+        justify-content: center;
     }
 
 
