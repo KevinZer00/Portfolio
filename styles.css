@@ -130,6 +130,11 @@ html, body {
     color: black;
 }
 
+.keyword.violet {
+    background-color: rgb(234, 0, 255);
+    color: black;
+}
+
 
 .social-icon img {
     width: 50px; 
